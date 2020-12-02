@@ -13,6 +13,8 @@ public class UserController {
     //后台认证方法
     public static void testlogin(String username,String password) {
 
+        //git@github.com:
+
         //初始化安全管理器工厂
         IniSecurityManagerFactory factory = new IniSecurityManagerFactory("classpath:shiro.ini");
 
@@ -43,6 +45,8 @@ public class UserController {
          * */
 
         boolean authenticated = subject.isAuthenticated();
+
+        System.out.println(token);
 
         System.out.println("认证状态: "+authenticated);
     }
